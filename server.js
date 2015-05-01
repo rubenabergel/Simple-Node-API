@@ -12,6 +12,12 @@ var Bear = require('./app/models/bear');
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://rubenabergel:qwertyuiop@dogen.mongohq.com:10047/whiteboardDB');
+var morgan = require('morgan');
+var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
+// var config = require('./config'); // get our config file
+var User   = require('./app/models/user'); // get our mongoose model
+
+
 
 // configure app to use bodyParser()
 // this will let us get the data from a POST
